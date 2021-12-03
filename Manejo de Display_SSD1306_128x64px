@@ -1,0 +1,42 @@
+/**
+ * @file main.cpp
+ * @name Estructura base para Display SSD1306 128x64px
+ * @author Rich González (contacto@geeksium.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-12-03
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * 
+ */
+
+#include <SPI.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+// Se define alto y ancho en la placa
+#define _displayX 128;
+#define _displayY 64;
+
+Adafruit_SSD1306 display(-1);
+
+void setup() {
+  Serial.begin(115200);
+
+  display.display();
+
+  // Inicializa el I2C en la dirección 0x3C.
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  
+  // Limpiar pantalla
+  display.clearDisplay();
+
+  // Dibuja un pixel en el centro
+  display.drawPixel( (_displayX/2)-1, (_displayY/2)-1, WHITE);
+  display.display();
+}
+
+void loop() {
+}
