@@ -36,15 +36,6 @@ void  loop(){
 ```
 
 # **Sensor de Temperatura**
-
-El sensor de efecto hall se puede combinar con una detección de umbral para actuar como un interruptor, por ejemplo. Además, los sensores de efecto Hall se utilizan principalmente para:
-
-- Detectar la proximidad a un objeto
-- Calcular la posiciónde la placa
-- Contar el número de revoluciones de una rueda
-- Detecta el cierre de una puerta
-- y más
-
 ### Código:
 
 ``` cpp
