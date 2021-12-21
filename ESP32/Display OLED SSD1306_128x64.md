@@ -4,7 +4,7 @@ Este es el código base para poder inicializar el Display OLED SSD1306.
 
 ---
 
-### **Bibliotecas requeridas**
+## Bibliotecas requeridas
 
 | Biblioteca (library) | Autor           | Descripción                                                       |
 | :------------------- | :-------------- | :---------------------------------------------------------------- |
@@ -16,7 +16,7 @@ Este es el código base para poder inicializar el Display OLED SSD1306.
 
 ---
 
-### **Definiciones**
+## Definiciones
 
 | Nombre              | Descripción              | Comentarios                                                    |
 | :------------------ | :----------------------- | :------------------------------------------------------------- |
@@ -27,7 +27,7 @@ Este es el código base para poder inicializar el Display OLED SSD1306.
 
 ---
 
-### **Configuración dentro de la función _setup()_**
+### Configuración dentro de la función _setup()_
 
 | Nombre                   | Argumentos                                     | Descripción                       | Comentarios |
 | :----------------------- | :--------------------------------------------- | :-------------------------------- | :---------- |
@@ -46,7 +46,7 @@ Este es el código base para poder inicializar el Display OLED SSD1306.
 | display.drawLine(16,0,16,128, SSD1306_WHITE); | Agrega al buffer una línea color blanca                     |             |
 | display.display();                            | Muestra el buffer en el display.                            |             |
 
-# CÓDIGO
+## Código
 
 ``` cpp
 
@@ -117,4 +117,21 @@ void setup() {
 
 void loop() {}
 
-```
+``
+
+---
+
+### Yo soy Rich y espero que este contenido te haya sido de utilidad
+
+Te comparto nuestras redes para poder ver más contenido de Geeksium.
+
+Hasta pronto!
+
+Sigue nuestras redes para este y para próximos proyectos:
+
+- [Canal de Telegram](https://t.me/geeksium)
+- [Instagram](https://instagram.com/geeksium)
+- [GitHub](https://github.com/geeksium)
+- [Facebook](https://facebook.com/geeksium)
+- [Patreon](https://patreon.com/geeksium)
+- [Invitar ☕ vía PayPal](https://paypal.me/richglz?country.x=MX&locale.x=es_XC)

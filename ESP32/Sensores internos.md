@@ -2,7 +2,7 @@
 
 La placa **ESP32** cuenta con sensores internos tales como los mencionados a continuación:
 
-# Sensor de efecto Hall
+## Sensor de efecto Hall
 
 > También "Sensor de campo electromagnético".
 
@@ -16,7 +16,7 @@ El sensor de efecto hall se puede combinar con una detección de umbral para act
 - Detecta el cierre de una puerta
 - y más...
 
-### Código:
+### Código de Sensor de efecto Hall
 
 ``` cpp
 #include <Arduino.h>
@@ -35,8 +35,11 @@ void  loop(){
 }
 ```
 
-# **Sensor de Temperatura**
-### Código:
+## Sensor de Temperatura
+
+Utilizado para saber la temperatura de la placa del ESP32 DEV-KIT.
+
+### Código de Sensor de temperatura
 
 ``` cpp
 #include <Arduino.h>
@@ -61,10 +64,29 @@ void  loop(){
 }
 ```
 
-# **Sensor de pines Touch**
+## Sensor de Pines touch
 
-### Código:
+El ESP32 cuenta con 10 pines touch, sin embargo, al menos el _ESP32 DEVKIT V1 de 30 pines_ sólo cuenta con 9, ya que el GPIO0 (TOUCH_1) no tiene un PIN al cual conectarse de manera física. Por otro lado hay much que hacer con los 9 pines touch disponibles.
+
+### Código de pines touch
 
 ``` cpp
   // Pendiente
 ```
+
+---
+
+### Yo soy Rich y espero que este contenido te haya sido de utilidad
+
+Te comparto nuestras redes para poder ver más contenido de Geeksium.
+
+Hasta pronto!
+
+Sigue nuestras redes para este y para próximos proyectos:
+
+- [Canal de Telegram](https://t.me/geeksium)
+- [Instagram](https://instagram.com/geeksium)
+- [GitHub](https://github.com/geeksium)
+- [Facebook](https://facebook.com/geeksium)
+- [Patreon](https://patreon.com/geeksium)
+- [Invitar ☕ vía PayPal](https://paypal.me/richglz?country.x=MX&locale.x=es_XC)
