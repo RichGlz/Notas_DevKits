@@ -9,6 +9,19 @@ Es una pregunta que muchos nos hemos hecho una vez que sabemos que el ESP32 cuen
 Copia y pega el siguiente código
 
 ``` cpp
+/**
+ * @file main.cpp
+ * @name Código para utilizar el segundo núcleo físico del ESP32.
+ * @author Rich González (contacto@geeksium.com)
+ * @brief Con este código se puede conocer al núcleo desde el cual se  ejecuta el programa principal.
+ * @version 0.1
+ * @date 2021-12-21
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * 
+ */
+
 #include <Arduino.h>
 
 void setup() {
