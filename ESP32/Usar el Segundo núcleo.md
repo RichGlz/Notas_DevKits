@@ -70,11 +70,20 @@ void loop(){}
 
 ---
 
-### Yo soy Rich y espero que este contenido te haya sido de utilidad
+---
 
-Te comparto nuestras redes para poder ver más contenido de Geeksium.
+<div align="center"> <span style="font-family:'bebas neue extrabold'; font-size:4em;">GEEKSIUM</span> </div>
 
+---
+
+---
+
+## Yo soy Rich!
+
+Espero que este contenido te haya sido de utilidad.
 Hasta pronto!
+
+---
 
 Sigue nuestras redes para este y para próximos proyectos:
 

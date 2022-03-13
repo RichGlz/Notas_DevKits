@@ -21,7 +21,7 @@ Con el **Arduino Uno**, sólo los pines 2 y 3 son configurables para interrupcio
 
 ## Código de ejemplo de interrupciones
 
-``` cpp
+``` Arduino
 #include <Arduino.h>
 
 uint8_t boton = 4;  // Se define el pin 4 como botón.
@@ -47,11 +47,11 @@ void loop(){}
 
 ### Desglose de parámetros de la función _attachinterrupt()_
 
-| Parámetro | valor declarado              | Descripción                                                  |
-| :-------- | :--------------------------- | :----------------------------------------------------------- |
-| PIN       | digitalPinToInterrupt(boton) | Se podría poner ser sólo _"boton"_, pero esta es la manera correcta de declarar el pin                |
-| ISR       | funcion_a_ejecutar           | Servicio o rutina a llamar. No son necesarios los paréntesis. i.e.: ~~funcion_a_ejecutar()~~ |
-| Mode      | RISING                       | Existen diferentes modos, se describen más adelante.                |
+| Parámetro | valor declarado              | Descripción                                                                                                          |
+| :-------- | :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| PIN       | digitalPinToInterrupt(boton) | Se podría poner ser sólo _"boton"_, pero esta es la manera correcta de declarar el pin                               |
+| ISR       | funcion_a_ejecutar           | Nombre de la funcion, servicio o rutina a llamar. *No son necesarios los paréntesis, como: ~~funcion_a_ejecutar()~~* |
+| Mode      | RISING                       | Existen diferentes modos, se describen más adelante.                                                                 |
 
 ### Modos
 
@@ -65,18 +65,66 @@ void loop(){}
 
 ---
 
-## Cómo evitar que hayan falsos positivos en el botón?
+## Problemas con falsos positivos
 
-La respuesta es, resistencias PULLUP
+Uno de los problemas más comunes al utilizar botones el circuitos es la presencia de campos magnéticos o influencias eléctricas cercanas al botón, lo que puede provoar (1) que el botón se presione solo o (2) que el botón, al ser presionado **una vez**, éste se active por dos o más veces.
+
+En la parte de *setup()* de la función compartida, se incluyó la línea de código `pinMode(boton, INPUT_PULLUP);`, haciendo referencia a usar una **resistencia Pull-Up interna** con la que cuenta el *ESP32 DEV KIT* [], esto resuelve.
+
+---
+
+## Pines de interrupción para ESP32
+
+| PLACA | PINES de interrupción                          | Motivo|
+| :----: | :---------------------------------------------: | :----------------------: |
+| ESP32 | Todos los GPIOs, excepto del GPIO34 al GPIO39. | 34, 35, 37, 39 son pines **INPUT ONLY** *(sólo entrada)*. |
+
+## Pines de interrupción para otras placas
+
+| PLACA                                          | Pines                             |
+| :--------------------------------------------- | :-------------------------------- |
+| ARDUINO UNO, NANO (y placas basadas en el 328) | 2, 3                              |
+| ARDUINO MEGA, MEGA2500, MEGA ADK               | 2, 3, 18, 19, 20, 21              |
+| ARDUINO Micro, Leonardo y basadas en el 32u4   | 0, 1, 2, 3, 7                     |
+| ESP8266                                        | Todos los GPIOs, excepto GPIO16   |
+| ESP01/ESP01s                                   | cuando exista un cambio de estado |
+
+_De ser necesario se irán agragando placas._
+
+---
+
+## Puntos a tener en cuenta en interrupciones
+
+1. Dentro de la función llamada desde la interrupción
+    * La función `delay()` no funciona
+    *  El valor devuelto por `millis()` no aumenta.
+
+Motivo:  Las *interrupciones internas* no se disparan mientras hay una *interrupción externa*, y las funciones `delay()` y `millis()` hacen uso de interrupciones internas.
+
+2. Los datos recibidos por el puerto serie se pueden perder mientras se está en la función llamada por la interrupción.
+
+---
+
+## Cómo evitar *falsos positivos* con el botón?
+
 [Artículo pendiente](https://github.com/geeksium).
 
 ---
 
-### Yo soy Rich y espero que este contenido te haya sido de utilidad
+---
 
-Te comparto nuestras redes para poder ver más contenido de Geeksium.
+<div align="center"> <span style="font-family:'bebas neue extrabold'; font-size:4em;">GEEKSIUM</span> </div>
 
+---
+
+---
+
+## Yo soy Rich!
+
+Espero que este contenido te haya sido de utilidad.
 Hasta pronto!
+
+---
 
 Sigue nuestras redes para este y para próximos proyectos:
 
