@@ -6,14 +6,20 @@ Es una pregunta que muchos nos hemos hecho una vez que sabemos que el ESP32 cuen
 
 ## Cómo saber qué núcleo estoy usando para alguna tarea en concreto?
 
-Copia y pega la siguiente línea de código en tu función `void loop(){...}`:
+Copia y pega el siguiente código
 
 ``` cpp
+#include <Arduino.h>
+
+void setup() {
+    Serial.begin(115200);
+}
+
+void loop(){
     Serial.prinln("Utilizando el núcleo: " + String(xPortGetID()));
     delay(500);
+}
 ```
-
-> No olvides inicializar el Serial con la línea de código: `Serial.begin(115200);`.
 
 ---
 
@@ -24,11 +30,11 @@ Es común que el ESP32 utilice el núcleo 1 para la ejecución normal de su prog
 ``` cpp
 #include <Arduino.h>
 
-// Función para Simular multitareas en CI con un sólo núcleo (RTOS).
-// En este caso se asignará a un núcleo físico secundario existente.
+// Función para Simular multitareas en Circuitos Intergrados (CI) con un sólo núcleo (RTOS).
+// En este caso se asignará a un núcleo físico secundario físico (no sólo simulado).
 TaskHandle_t Task2;
 
-// Función "loop2", que asignaremos al núcleo secundario.
+// Función "loop2". función que se le asignará al núcleo secundario.
 void loop2 (void *parameter){
     for(;;){
         // [Opcional] Se imprimirá el Núcleo desde el cual se ejecuta esta tarea.
@@ -41,18 +47,17 @@ void loop2 (void *parameter){
     vTaskDelay(10);
 }
 
-
 void setup() {
     /**
      * Definición de parámetros
      * 
      * @param pvTaskCode    loop2     Nombre de la función recursiva.
-     * @param pcName        Tarea_1   Nombre de esta función, puede cambiarse.
+     * @param pcName        Tarea_1   Nombre de esta función que se està definiendo, puede cambiarse.
      * @param usStackDepth  1000      Tamaño de la pila.
-     * @param pvParameters  NULL      Parámetros para esta tarea, en este caso nada.
+     * @param pvParameters  NULL      Parámetros para esta tarea, en este caso son NULOS.
      * @param uxPriority    1         Prioridad.
-     * @param pvCreatedTask &Tarea2   Nombre de la tarea que le dimos a la "TaskHandler_t".
-     * @param xCoreID       0         Núcleo en el que se ejecutará esta tarea.
+     * @param pvCreatedTask &Tarea2   Nombre de la tarea que le dimos a la "TaskHandler_t" (se definió después del #include <Arduino.h>).
+     * @param xCoreID       0         Núcleo en el que se ejecutará esta tarea, en este caso el núcleo 0.
      */
     xTaskCreatePinnedToCore(loop2, "Tarea_1", 1000, NULL, 1, &Tarea2, 0);
     

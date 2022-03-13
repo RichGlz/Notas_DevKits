@@ -49,25 +49,26 @@ void loop(){}
 
 | Parámetro | valor declarado              | Descripción                                                  |
 | :-------- | :--------------------------- | :----------------------------------------------------------- |
-| PIN       | digitalPinToInterrupt(boton) | Esta es la manera  correcta de declarar el pin               |
-| ISR       | funcion_a_ejecutar           | Servicio o rutina a llamar. No son necesarios los paréntesis |
-| Mode      | RISING                       | Existen diferentes modos,  lea a continuación                |
+| PIN       | digitalPinToInterrupt(boton) | Se podría poner ser sólo _"boton"_, pero esta es la manera correcta de declarar el pin                |
+| ISR       | funcion_a_ejecutar           | Servicio o rutina a llamar. No son necesarios los paréntesis. i.e.: ~~funcion_a_ejecutar()~~ |
+| Mode      | RISING                       | Existen diferentes modos, se describen más adelante.                |
 
 ### Modos
 
-| Modo    | Se ejecuta la interrupción si...                  |
+| Modo    | Se ejecutará la interrupción cuando...            |
 | :------ | :------------------------------------------------ |
-| LOW     | **Siempre** que el pin esté en nivel bajo (LOW)   |
-| HIGH    | **Siempre** que el pin esté en nivel alto (HIGH)  |
-| RISING  | Cuando el nivel va de **bajo a alto** (LOW->HIGH) |
-| FALLING | Cuando el nivel va de **alto a bajo** (HIGH->LOW) |
-| CHANGE  | Cuando exista un cambio de estado                 |
+| LOW     | **siempre** que el pin esté en nivel bajo (LOW)   |
+| HIGH    | **siempre** que el pin esté en nivel alto (HIGH)  |
+| RISING  | cuando el nivel va de **bajo a alto** (LOW->HIGH) |
+| FALLING | cuando el nivel va de **alto a bajo** (HIGH->LOW) |
+| CHANGE  | cuando exista un cambio de estado                 |
 
 ---
 
 ## Cómo evitar que hayan falsos positivos en el botón?
 
-Para eso te invito a leer el siguiente [artículo](https://github.com/geeksium).
+La respuesta es, resistencias PULLUP
+[Artículo pendiente](https://github.com/geeksium).
 
 ---
 
