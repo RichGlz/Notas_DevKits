@@ -42,6 +42,19 @@ Utilizado para saber la temperatura de la placa del ESP32 DEV-KIT.
 ### Código de Sensor de temperatura
 
 ``` cpp
+/**
+ * @file main.cpp
+ * @name Código de Sensor de temperatura
+ * @author Rich González (contacto@geeksium.com)
+ * @brief En este código se muestran la forma para acceder al sensor de temperatura interno del ESP32.
+ * @version 0.1
+ * @date 2021-12-21
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * 
+ */
+
 #include <Arduino.h>
 #ifdef __cplusplus
 extern "C"  {

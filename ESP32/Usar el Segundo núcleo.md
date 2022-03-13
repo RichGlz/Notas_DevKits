@@ -28,6 +28,19 @@ Es común que el ESP32 utilice el núcleo 1 para la ejecución normal de su prog
 ### Código
 
 ``` cpp
+/**
+ * @file main.cpp
+ * @name Código para utilizar el segundo núcleo físico del ESP32.
+ * @author Rich González (contacto@geeksium.com)
+ * @brief En este código se describe la forma correcta para ejecutar funciones en el segundo núcleo del ESP32, mediante el uso de RTOS (Real-time Operative System).
+ * @version 0.1
+ * @date 2021-12-21
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * 
+ */
+
 #include <Arduino.h>
 
 // Función para Simular multitareas en Circuitos Intergrados (CI) con un sólo núcleo (RTOS).

@@ -5,7 +5,7 @@ Arduino, ESP8266, ESP32, etc?
 
 Pues la realidad es que es posible, sólo hay que darle unas cuantas condiciones al compilador para que, al momento de hacer su trabajo, decida por sí mismo qué lineas de código incluir y cuales no con base en la placa que con la que estemos trabajando.
 
-## Desglose de parámetros de la función _attachinterrupt()_
+## Tabla de referencia
 
 | Función                        | Descripción                                        | Se lee como                                                          |
 | :----------------------------- | :------------------------------------------------- | :------------------------------------------------------------------- |
@@ -17,7 +17,22 @@ Pues la realidad es que es posible, sólo hay que darle unas cuantas condiciones
 
 ## Código de ejemplo
 
-``` Arduino
+``` cpp
+/**
+ * @file main.cpp
+ * @name Código para instrucciones del IDE multi-hardware
+ * @author Rich González (contacto@geeksium.com)
+ * @brief En este código se muestran la forma correcta para que un mismo código se ejecute en diferentes dispositivos, según su código de Hardware.
+ * @version 0.1
+ * @date 2022-3-13
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * 
+ */
+
+#include <Arduino.h>
+
 #if defined(ESP32)
   #pragma message "Código para ESP32"
   // Escriba código a ejecutar para ESP32

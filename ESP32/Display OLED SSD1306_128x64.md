@@ -49,16 +49,15 @@ Este es el código base para poder inicializar el Display OLED SSD1306.
 ## Código
 
 ``` cpp
-
 /**
  * @file main.cpp
  * @name Estructura base para Display SSD1306 128x64px
  * @author Rich González (contacto@geeksium.com)
- * @brief 
+ * @brief Código de ejemplo para el uso del display SSD1306 de 128x64
  * @version 0.1
  * @date 2021-12-03
  * 
- * @copyright Copyright (c) 2021
+ * @copyright Copyright (c) 2022
  * 
  * 
  */

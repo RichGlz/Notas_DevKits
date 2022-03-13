@@ -21,7 +21,20 @@ Con el **Arduino Uno**, sólo los pines 2 y 3 son configurables para interrupcio
 
 ## Código de ejemplo de interrupciones
 
-``` Arduino
+``` cpp
+/**
+ * @file main.cpp
+ * @name Código de ejemplo de interrupciones
+ * @author Rich González (contacto@geeksium.com)
+ * @brief Este código contiene el ejemplo básico para interrupciones en el ESP32
+ * @version 0.1
+ * @date 2021-12-21
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ * 
+ */
+
 #include <Arduino.h>
 
 uint8_t boton = 4;  // Se define el pin 4 como botón.
@@ -96,8 +109,8 @@ _De ser necesario se irán agragando placas._
 ## Puntos a tener en cuenta en interrupciones
 
 1. Dentro de la función llamada desde la interrupción
-    * La función `delay()` no funciona
-    *  El valor devuelto por `millis()` no aumenta.
+   * La función `delay()` no funciona
+   *  El valor devuelto por `millis()` no aumenta.
 
 Motivo:  Las *interrupciones internas* no se disparan mientras hay una *interrupción externa*, y las funciones `delay()` y `millis()` hacen uso de interrupciones internas.
 

@@ -35,6 +35,19 @@ esp_random();
 ## Código de ejemplo de las tres funciones
 
 ``` cpp
+/**
+ * @file main.cpp
+ * @name Números aleatorios en el ESP32
+ * @author Rich González (contacto@geeksium.com)
+ * @brief Este código muestra las diferentes maneras de invocar números aleatorios con el ESP32.
+ * @version 0.1
+ * @date 2021-12-21
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ * 
+ */
+
 #include <Arduino.h>
 
 void setup(){
