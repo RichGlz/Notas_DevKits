@@ -98,7 +98,13 @@ void loop(){}
 
 ---
 
-<div align="center"> <span style="font-family:'bebas neue extrabold'; font-size:4em;">GEEKSIUM</span> </div>
+<div align="center">
+    <span
+    style="font-family:'bebas neue extrabold';
+    font-size:4em;">
+        GEEKSIUM
+    </span>
+</div>
 
 ---
 
