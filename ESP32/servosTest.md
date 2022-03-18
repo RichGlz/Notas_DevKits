@@ -3,7 +3,7 @@
  * @file main.cpp
  * @name Código probador de servos
  * @author Rich González (contacto@geeksium.com)
- * @brief En este código se muestran la forma para acceder al sensor de temperatura interno del ESP32.
+ * @brief Con este código aún ando haciendo pruebas.
  * @version 0.1
  * @date 2022-03-17
  * 
