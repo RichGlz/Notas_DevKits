@@ -41,6 +41,19 @@ La creación de bibliotecas es una páctica muy utilizada especialmente a la hor
 > Se recomienda ampliamente documentar el código de las bibliotecas creadas, ya que de hacerse de la manera correcta, será más fácil el poder saber a qué corresponde cada valor al momentos de llamar a las funciones.
 
 ``` cpp
+/**Código SIN comentarios**/
+
+#include <bibliotecaNueva.h>
+
+float suma( float num1, float num2 ){ return num1 + num2; }
+float resta( float num1, float num2 ){ return num1 - num2; }
+float multi( float num1, float num2 ){ return num1 * num2; }
+```
+
+``` cpp
+
+/**Código CON comentarios**/
+
 #include <bibliotecaNueva.h>
 
 /**
