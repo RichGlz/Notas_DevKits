@@ -59,8 +59,6 @@ void apagaLed( const uint8_t pin ) ;      // Apaga LED
 > Se recomienda ampliamente documentar el código de las bibliotecas creadas, ya que de hacerse de la manera correcta, será más fácil el poder saber a qué corresponde cada valor al momentos de llamar a las funciones.
 
 ``` cpp
-/**Código SIN comentarios**/
-
 #include <ManejoDeLeds.h>
 
 // Declaración de LED
