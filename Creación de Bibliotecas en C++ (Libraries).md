@@ -1,4 +1,4 @@
-# Creación de Bibliotecas (libraries) en C
+# Creación de Bibliotecas (libraries) en C++
 
 La creación de bibliotecas es una páctica muy utilizada especialmente a la hora de separar o 'modulizar' nuestro código. De esta manera el código se ve más limpio y puede ser más comprensible para los demás programadores involucrados.
 
@@ -37,7 +37,7 @@ Proyecto
      main.cpp
 ```
 
-## Ejemplo de Biblioteca en donde se realizan operaciones básicas
+## Ejemplo de Biblioteca en donde se realizan operaciones con LEDs
 
 ### Crear archivo de encabezados **bibliotecaNueva.h**
 
@@ -92,7 +92,7 @@ void apagaLed( const uint8_t pin ) {
 #include "ManejoDeLeds.h"
 
 // Declarar la variable
-const uint8_t pinDestino = 2;
+const uint8_t pinDestino = 2;   //Para este ejemplo será el PIN 2.
 
 void setup() {
 
@@ -103,9 +103,10 @@ void setup() {
     apagaLed(pinDestino);
 }
 ```
+
 ---
 
-
+## GEEKSIUM
 
 ---
 
