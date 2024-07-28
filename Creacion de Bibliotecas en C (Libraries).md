@@ -1,4 +1,4 @@
-# Creación de Bibliotecas (libraries) en C/C++
+# Creación de Bibliotecas (libraries) en C
 
 La creación de bibliotecas es una páctica muy utilizada especialmente a la hora de separar o 'modulizar' nuestro código. De esta manera el código se ve más limpio y puede ser más comprensible para los demás programadores involucrados.
 
