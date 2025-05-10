@@ -29,7 +29,7 @@ void setup() {
 }
 
 void loop(){
-    Serial.println("Utilizando el núcleo: " + String(xPortGetID()));
+    Serial.println("Utilizando el núcleo: " + String(xPortGetCoreID()));
     delay(500);
 }
 ```
