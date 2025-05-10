@@ -85,7 +85,7 @@ void setup() {
      * @param pvCreatedTask &Tarea2   Nombre de la tarea que le dimos a la "TaskHandler_t" (se definió después del #include <Arduino.h>).
      * @param xCoreID       0         Núcleo en el que se ejecutará esta tarea, en este caso el núcleo 0.
      */
-    xTaskCreatePinnedToCore(loop2, "Tarea_1", 1000, NULL, 1, &Tarea2, 0);
+    xTaskCreatePinnedToCore(loop2, "Tarea_1", 1000, NULL, 1, &Task2, 0);
     
     // Inicialización normal para el Monitor Serial.
     Serial.begin(115200);
